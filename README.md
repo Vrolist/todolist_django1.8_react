@@ -1,5 +1,5 @@
 # Todo示例项目
-技术：Django+DjangoRestFramework+React+Bootstrap
+技术：Django+DjangoRestFramework+PostgreSQL+React+Bootstrap
 
 后端数据查看地址：http://todo.spbeen.com/api/v2/todo/
 
