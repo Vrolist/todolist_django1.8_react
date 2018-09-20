@@ -119,12 +119,22 @@ WSGI_APPLICATION = 'todolist_py2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { }
+DATABASES_CHOICES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'product':{
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'husongsxx',
+        'HOST': '47.75.115.109',
+        'PORT': '5432',
     }
 }
+DATABASES['default']=DATABASES_CHOICES[os.environ.get('DB_CHOICE','product')]
 
 
 # Password validation
